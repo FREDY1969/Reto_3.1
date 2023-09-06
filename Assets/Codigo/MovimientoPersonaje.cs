@@ -23,7 +23,7 @@ public class MovimientoPersonaje : MonoBehaviour
     public LayerMask capaPiso;
 
     public bool activar { get; set; }
-
+    public Vector3 posicionInicio;
     private Vector3 velocidad;
     private bool estaEnPiso;
     private float velocidadGiro;
@@ -31,12 +31,16 @@ public class MovimientoPersonaje : MonoBehaviour
     private float vertical;
     private CharacterController cuerpo;
     private Animator animaciones;
+    public AudioClip audioClipmuerte;
+    private AudioSource audioSource;
 
     private void Start()
     {
         activar = true;
+        posicionInicio = this.transform.position;
         animaciones = GetComponent<Animator>();
         cuerpo = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -80,5 +84,29 @@ public class MovimientoPersonaje : MonoBehaviour
         animaciones.SetBool("EnElPiso", estaEnPiso);
         if (!estaEnPiso)
             animaciones.SetInteger("Salto", (int)velocidad.y);
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        
+
+        if (collision.gameObject.CompareTag("Morir"))
+        {
+            audioSource.PlayOneShot(audioClipmuerte, 1f);
+            Reinicio();
+        }
+
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Muerte"))
+        {
+            audioSource.PlayOneShot(audioClipmuerte, 1f);
+            Reinicio();
+        }
+        
+    }
+    void Reinicio()
+    {
+               transform.position = posicionInicio;
     }
 }

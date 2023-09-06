@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Elemento
+  - Muerte
+  - CheckPoint
+  - Gema
   layers:
   - Default
   - TransparentFX
