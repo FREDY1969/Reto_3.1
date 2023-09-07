@@ -8,6 +8,7 @@ public class Gemas : MonoBehaviour
     public AudioClip pickupSound;
     public int coinValue = 1;
     public Text scoreText;
+    
 
     private bool isCollected = false;
 
