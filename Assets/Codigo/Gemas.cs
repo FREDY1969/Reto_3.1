@@ -28,7 +28,8 @@ public class Gemas : MonoBehaviour
         // Reproducir el sonido de recogida
         if (pickupSound != null)
         {
-            AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+            AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position,1f);
+            Debug.Log("Sonido");
         }
 
         // Actualizar los puntos

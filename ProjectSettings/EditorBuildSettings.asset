@@ -7,13 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/NiveldeAire.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    guid: 0fbe507d8a36cff49bbb98fd4b066061
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 23020469057e6e14cac0870cf697f8d7
-  - enabled: 1
-    path: Assets/Scenes/NiveldeAgua.unity
-    guid: a4486fad78c052143b8abce92ae0aaa6
   - enabled: 1
     path: Assets/Scenes/NiveldelFuego.unity
     guid: 08cd7ad351c38284fa225b3c14c7087f

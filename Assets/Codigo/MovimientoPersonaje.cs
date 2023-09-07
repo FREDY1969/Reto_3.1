@@ -73,7 +73,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
         if (!estaEnPiso)
             velocidad.y += gravedad * Time.deltaTime;
-        Debug.Log(velocidad.y);
+        //Debug.Log(velocidad.y);
         EstadosAnimaciones();
     }
     private void EstadosAnimaciones()
