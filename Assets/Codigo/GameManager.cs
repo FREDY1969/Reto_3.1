@@ -4,7 +4,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public GameObject Objetoaaparecer;
     private int score = 0;
     public TMP_Text scoreText;
     //public Text scoreText;
@@ -23,8 +23,13 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int points)
     {
+       
         score +=30* points;
         UpdateScoreUI();
+        if(score>=30)
+        {
+            Objetoaaparecer.SetActive(true);
+        }
     }
 
     private void UpdateScoreUI()

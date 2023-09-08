@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveldelsol.unity
     guid: 6aca73f88ed0d544e9218d6c82a0a806
+  - enabled: 1
+    path: Assets/Scenes/NiveldeAgua.unity
+    guid: 6603c1e12a72bc140aee83671f90953f
   m_configObjects: {}
