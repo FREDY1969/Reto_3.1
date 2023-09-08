@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int points)
     {
-        score += points;
+        score +=30* points;
         UpdateScoreUI();
     }
 
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Puntos: " + score.ToString();
+            scoreText.text = "KWH GENERADOS " + score.ToString();
             
         }
     }
