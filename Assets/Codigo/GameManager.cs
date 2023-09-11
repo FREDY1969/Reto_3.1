@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
        
         score +=30* points;
         UpdateScoreUI();
-        if(score>=30)
+        if(score>=180)
         {
             Objetoaaparecer.SetActive(true);
         }
